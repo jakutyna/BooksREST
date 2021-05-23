@@ -2,11 +2,11 @@
 
 import factory
 
-from tasks.models import Book
+from tasks.models import Account, Book
+from django.contrib.auth.models import User
 
 
 class BookFactory(factory.django.DjangoModelFactory):
-
     class Meta:
         model = Book
 
@@ -16,3 +16,16 @@ class BookFactory(factory.django.DjangoModelFactory):
     price = factory.faker.Faker._get_faker().pydecimal(right_digits=2,
                                                        positive=True, max_value=200)
 
+
+class UserFactory(factory.django.DjangoModelFactory):
+    class Meta:
+        model = User
+
+    username = factory.faker.Faker('last_name')
+    password = 'p@55w0rd'
+    email = f'{factory.faker.Faker._get_faker().first_name()}@{factory.faker.Faker._get_faker().last_name()}.com'
+
+
+class AccountFactory(factory.django.DjangoModelFactory):
+    class Meta:
+        model = Account

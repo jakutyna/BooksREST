@@ -47,8 +47,9 @@ class PurchaseView(APIView):
             Operation.objects.create(operation_type=Operation.PURCHASE, balance_change=total_cost,
                                      current_balance=account.balance, account=account)
 
-            # Required response schema is different from request - response created manually (no serializer used)
+            # Required response schema is different from request -
+            # - response was created manually (no serializer used)
             response_dict = dict(serializer.data)
             response_dict["total_cost"] = total_cost
-            return Response(response_dict)
+            return Response(response_dict, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
