@@ -5,7 +5,7 @@ class Account(models.Model):
     """
     Account model holds current balance of every user.
     """
-    balance = models.DecimalField(max_digits=10, decimal_places=2)
+    balance = models.DecimalField(max_digits=8, decimal_places=2)
 
     # Default Django User model used
     user = models.ForeignKey('auth.User', on_delete=models.CASCADE)

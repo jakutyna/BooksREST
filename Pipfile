@@ -7,6 +7,8 @@ verify_ssl = true
 ipython = "*"
 pytest = "*"
 pytest-django = "*"
+factory-boy = "*"
+faker = "*"
 
 [packages]
 django = "*"
