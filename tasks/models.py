@@ -67,7 +67,9 @@ class Purchase(models.Model):
 
     total_cost = models.DecimalField(max_digits=8, decimal_places=2)
 
-    # Book ids for each purchase will be stored in the intermediate table
+    # Book ids for each purchase will be stored in the intermediate table.
+    # TODO: Create custom class for intermediate table with field 'amount'
+    # TODO: allowing to buy multiple copies of specific book at once.
     books = models.ManyToManyField(Book)
 
     account = models.ForeignKey(Account, on_delete=models.CASCADE)
