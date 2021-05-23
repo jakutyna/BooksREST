@@ -12,7 +12,7 @@ class Account(models.Model):
 
     @property
     def account_name(self):
-        return f'{self.user.username}\' account'
+        return f'{self.user.username}\'s account'
 
     def __str__(self):
         return self.account_name

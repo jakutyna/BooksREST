@@ -11,7 +11,7 @@ book store based on Django REST framework.
 * __pytest__
 * __pytest-django__
 
-### Installation ###
+### Installation
 
 * Install dependencies from `Pipfile` with `pipenv`:
 
@@ -32,3 +32,13 @@ book store based on Django REST framework.
 * Run Django development server:
 
 `python manage.py runserver`
+
+### Django admin
+
+Django admin was added to the project for easier 
+communication with database i.e. for manual testing.
+
+Django admin panel is available under `/admin` endpoint.
+For full access to the admin panel create a superuser:
+
+`python manage.py createsuperuser`
