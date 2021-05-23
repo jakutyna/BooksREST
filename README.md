@@ -13,13 +13,21 @@ book store based on Django REST framework.
 
 ### Installation ###
 
-* Install dependencies from `Pipfile` in virtualenv with `pipenv`:
+* Install dependencies from `Pipfile` with `pipenv`:
 
 `pipenv install`
 
 * For development purposes (includes `[dev-packages]` from `Pipfile`):
 
 `pipenv install --dev`
+
+* Start virtualenv:
+
+`pipenv shell`
+
+* Apply migrations (SQLite database used by default - see `settings.py`):
+
+`python manage.py runserver`
 
 * Run Django development server:
 
