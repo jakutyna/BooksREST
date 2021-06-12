@@ -1,15 +1,21 @@
 ## BooksREST
 
-This project is a recruitment task for an internship in Daftcode
-daftBlockchains. The purpose of the project is to create an online
-book store based on Django REST framework.
+This project is a recruitment task for a Python internship. 
+The purpose of the project is to create an online
+book store based on Django REST framework. 
+Application allows users to buy books with 
+money deposited on their accounts.
 
 ### Used technologies
 * __Python 3.8__
 * __Django__
 * __Django REST__
+  
+### Used technologies - testing
 * __pytest__
 * __pytest-django__
+* __factory-boy__
+* __faker__
 
 ### Installation
 
